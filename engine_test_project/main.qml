@@ -74,6 +74,27 @@ Window {
         }
     }
 
+    Item{
+        id: rpm_control
+        property int  w: 41
+        property int  h: 34
+
+        Button{
+            id: rpm_up
+            width: rpm_control.w; height: rpm_control.h
+            text: "inc"
+            x: 1276; y: 970
+
+        }
+        Button{
+            id: rpm_down
+            width: rpm_control.w; height: rpm_control.h
+            text: "dec"
+            x: 1323; y: 970
+
+        }
+    }
+
 
 
 
