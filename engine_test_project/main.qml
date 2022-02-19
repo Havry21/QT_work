@@ -20,6 +20,7 @@ Window {
 
     Engine{
         id: engine
+
     }
 
     Image {
@@ -38,29 +39,27 @@ Window {
 
     Text{
         id: rpm_num
-
     }
 
     Item {
         id: controll_button
 
-        signal mode(type: int)
 
         Button{
             id: button1
             width: 175; height: 215
             text: "Start"
             x: 134; y: 187
-            onClicked: engine.set_mode = 1;
+            onClicked: engine.setMode(1)
 
         }
 
         Button{
             id: button2
             width: 175; height: 215
-            text: engine.set_mode
+            text: "smt"
             x: 1286; y: 513
-            onClicked: engine.set_mode = 2;
+            onClicked: engine.setMode(2)
 
         }
 
@@ -69,7 +68,7 @@ Window {
             width: 175; height: 215
             text: "Stop"
             x: 73; y: 683
-            onClicked: engine.set_mode = 3;
+            onClicked: engine.setMode(4)
 
         }
     }
@@ -84,6 +83,8 @@ Window {
             width: rpm_control.w; height: rpm_control.h
             text: "inc"
             x: 1276; y: 970
+            onClicked: engine.setMode(2)
+
 
         }
         Button{
@@ -91,6 +92,8 @@ Window {
             width: rpm_control.w; height: rpm_control.h
             text: "dec"
             x: 1323; y: 970
+            onClicked: engine.setMode(3)
+
 
         }
     }
